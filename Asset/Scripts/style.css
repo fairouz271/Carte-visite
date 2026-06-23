@@ -16,6 +16,10 @@ body {
     background: linear-gradient(to right, #2c3e50, #bdc3c7);
     color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
 
 
@@ -29,9 +33,8 @@ body {
     text-align: center;
     text-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
-    opacity: 0;
     transform: translateX(-100px);
-    animation: apparition 0s ease-out 0.5s forwards;
+    animation: apparition 1s ease-out 0.3s forwards;
 }
 
 @keyframes apparition {
@@ -53,7 +56,7 @@ body {
 
 /* Conteneur principal */
 .container {
-    min-height: 500px;
+    flex: 1;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -63,8 +66,8 @@ body {
 
 /* Image */
 .classe-image {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    max-width: 300px;
     object-fit: cover;
     border: 1px solid white;
     border-radius: 50% 50% 80% 20% / 30% 30% 70% 70%;
@@ -87,9 +90,9 @@ h2 {
 
 /* Triangle */
 .triangle {
+    display: inline-block;
     font-size: large;
     color: #031c2c;
-    display: inline-block;
     transition: 0.3s;
 }
 
@@ -106,12 +109,12 @@ h2 {
 }
 
 /* Affichage au clic */
-#toggle:checked ~ #liste {
+#toggle:checked~#liste {
     display: flex;
 }
 
 /* Rotation du triangle */
-#toggle:checked ~ h2 .triangle {
+#toggle:checked~h2 .triangle {
     transform: rotate(180deg);
 }
 
@@ -129,7 +132,6 @@ nav {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 5px;
 }
 
 .liens {
@@ -175,15 +177,16 @@ nav {
 
     nav {
         display: none;
+      
+    }
+
+    #checkbox:checked+.burger+nav {
+        display: flex; 
         flex-direction: row;
         gap: 15px;
     }
 
-    #checkbox:checked + .burger + nav {
-        display: flex;
-    }
-
-    #checkbox:checked + .burger {
+    #checkbox:checked+.burger {
         display: none;
     }
 }
