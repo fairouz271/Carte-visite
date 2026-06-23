@@ -1,0 +1,20 @@
+/* 
+   BODY
+ */
+
+/* Réinitialisation */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corps de page */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    color: white;
+    padding: 20px;
+}
+
