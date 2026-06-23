@@ -45,3 +45,78 @@ body {
         transform: translateX(0);
     }
 }
+
+
+/* 
+   MAIN
+*/
+
+/* Conteneur principal */
+.container {
+    min-height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image */
+.classe-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 50% 50% 80% 20% / 30% 30% 70% 70%;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+/* Titre */
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+/* Checkbox cachée */
+#toggle {
+    display: none;
+}
+
+/* Triangle */
+.triangle {
+    font-size: large;
+    color: #031c2c;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* Liste cachée complètement */
+#liste {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#liste li {
+    list-style: none;
+}
+
+/* Affichage au clic */
+#toggle:checked ~ #liste {
+    display: flex;
+}
+
+/* Rotation du triangle */
+#toggle:checked ~ h2 .triangle {
+    transform: rotate(180deg);
+}
+
+/* Titre cliquable */
+h2 label {
+    cursor: pointer;
+}
+
