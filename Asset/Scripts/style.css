@@ -18,3 +18,30 @@ body {
     padding: 20px;
 }
 
+
+/* 
+   HEADER
+*/
+
+.banner {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: apparition 0s ease-out 0.5s forwards;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
